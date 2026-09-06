@@ -28,7 +28,7 @@ export default async function ProjectDetailPage({
 
   if (!project) notFound()
 
-  const analyses = (project.project_analyses ?? []) as Array<{
+  const analyses = (project.project_analyses ?? []) as unknown as Array<{
     id: string
     keyword: string
     starred: boolean
